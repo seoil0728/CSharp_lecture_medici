@@ -35,6 +35,7 @@ namespace day1_1
             // GetType
             Console.WriteLine("v1 type is {0}", v1.GetType());
             Console.WriteLine("s1 type is {0}", s1.GetType());
+            Console.WriteLine();
 
 
             // string interpolation
@@ -44,12 +45,14 @@ namespace day1_1
             Console.WriteLine(si1);
             Console.WriteLine(si2);
             Console.WriteLine(si3);
+            Console.WriteLine();
 
             // Console.ReadLine() : user input in string
             // Console.ReadKey() : return key that user type
             Console.WriteLine("키를 입력해보세요.");
             ConsoleKeyInfo user_key = Console.ReadKey();
             Console.WriteLine($"입력 키 정보 : {user_key.Key}");
+            Console.WriteLine();
 
 
             // explicit casting
@@ -66,6 +69,7 @@ namespace day1_1
 
             // PadLeft
             Console.WriteLine($"Padding Left = {y1.ToString().PadLeft(8, '0')}");
+            Console.WriteLine();
 
             // var = 암시적 변수 지정
             var q1 = 10;
@@ -76,6 +80,7 @@ namespace day1_1
             Console.WriteLine(q2.GetType());
             Console.WriteLine(q3.GetType());
             Console.WriteLine(q4.GetType());
+            Console.WriteLine();
 
             // default = 해당 변수의 초기값으로 자동 지정
             int d1 = default;
@@ -84,8 +89,9 @@ namespace day1_1
             float d4 = default;
             char d5 = default;
             Console.WriteLine($"{d1}, {d2}, {d3}, {d4}, {d5}");
+            Console.WriteLine();
 
-            // string formatting
+            // string method
             // 문자열 탐색 메소드
             // 문자열변수.메소드(옵션)
             string sampleTxt1 = "Good Morning";
@@ -106,7 +112,16 @@ namespace day1_1
             Console.WriteLine($"\t sampleTxt1 = {sampleTxt1}");
 
             Console.WriteLine("\t Insert = {0}", sampleTxt1.Insert(0, "***"));
+            Console.WriteLine();
 
+            // string formatting
+            String sample = "abcedfg";
+            // Padding left : n > 0, Padding right : n < 0
+            Console.WriteLine("*{0, 20}*", sample);
+            Console.WriteLine("*{0, -20}*", sample);
+            Console.WriteLine("1234*{0, 20}*1234", sample);
+            Console.WriteLine("1234*{0, -20}*1234", sample);
+            Console.WriteLine();
 
             // number formatting
             Console.WriteLine("\t 10진수 => {0:D10}", 12345);
@@ -114,7 +129,10 @@ namespace day1_1
             Console.WriteLine("\t 16진수 => 0X{0:X}", 0x32A);
             Console.WriteLine("\t 16진수 => 0X{0:X10}", 0x32A);
             Console.WriteLine("\t N => {0:N}", 1234567890);
-            Console.WriteLine("\t N => {0:N0}", 1234567890);
+            Console.WriteLine("\t N0 => {0:N0}", 1234567890);
+            Console.WriteLine("\t N1 => {0:N1}", 1234567890);
+            Console.WriteLine("\t N3 => {0:N3}", 1234567890);
+            Console.WriteLine();
 
             Console.WriteLine("\t F => {0:F}", 1234.5678);
             Console.WriteLine("\t F => {0:F3}", 1234);
@@ -195,10 +213,6 @@ namespace day1_1
             Console.WriteLine($"\t2진수 = {Convert.ToString(vint, 2)}");
             Console.WriteLine($"\t8진수 = {Convert.ToString(vint, 8)}");
             Console.WriteLine($"\t16진수 = {Convert.ToString(vint, 16)}");
-
-
-
-
         }
     }
 }
