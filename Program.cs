@@ -85,6 +85,29 @@ namespace day1_1
             char d5 = default;
             Console.WriteLine($"{d1}, {d2}, {d3}, {d4}, {d5}");
 
+            // string formatting
+            // 문자열 탐색 메소드
+            // 문자열변수.메소드(옵션)
+            string sampleTxt1 = "Good Morning";
+            string sampleTxt2 = "가나다라마바사아자차카타파하";
+            Console.WriteLine($"\t sampleTxt1 = {sampleTxt1}");
+            Console.WriteLine($"\t sampleTxt2 = {sampleTxt2}");
+            Console.WriteLine($"\t 마지막 o의 인덱스 위치 = {sampleTxt1.LastIndexOf("o")}");
+            Console.WriteLine($"\t 첫번째 o의 인덱스 위치 = {sampleTxt1.StartsWith("o")}");
+            Console.WriteLine($"\t a로 시작하는가? {sampleTxt1.StartsWith("a")}");
+            Console.WriteLine($"\t G로 시작하는가? {sampleTxt1.StartsWith("G")}");
+            Console.WriteLine($"\t G로 끝나는가? {sampleTxt1.EndsWith("G")}");
+            Console.WriteLine($"\t ing로 끝나는가? {sampleTxt1.EndsWith("ing")}");
+            Console.WriteLine($"\t 차가 포함되었는가? {sampleTxt2.Contains("차")}");
+            Console.WriteLine($"\t Morning 글자 교체 {sampleTxt1.Replace("Morning", "Night")}");
+            Console.WriteLine($"\t sampleTxt1 = {sampleTxt1}");
+            // 새로운 값으로 교체하려면?
+            sampleTxt1 = sampleTxt1.Replace("Morning", "Night");
+            Console.WriteLine($"\t sampleTxt1 = {sampleTxt1}");
+
+            Console.WriteLine("\t Insert = {0}", sampleTxt1.Insert(0, "***"));
+
+
             // number formatting
             Console.WriteLine("\t 10진수 => {0:D10}", 12345);
             Console.WriteLine("\t 16진수 => {0}", 0x32A);
@@ -95,7 +118,7 @@ namespace day1_1
 
             Console.WriteLine("\t F => {0:F}", 1234.5678);
             Console.WriteLine("\t F => {0:F3}", 1234);
-            Console.WriteLine("\t F => {0:F0}", 1234.5678);
+            Console.WriteLine("\t F => {0:F0}", 1234.5678); 
             Console.WriteLine("\t E => {0:E}", 1234.5678);
             Console.WriteLine("\t E => {0:E2}", 1234.5678);
             Console.WriteLine("\t E => {0:E5}", 1234.5678);
